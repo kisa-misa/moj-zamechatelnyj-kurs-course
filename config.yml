@@ -1,0 +1,16 @@
+title: Мой замечательный курс
+description: бям
+template:
+  repo: moj-zamechatelnyj-kurs-template
+  name: moj-zamechatelnyj-kurs
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
